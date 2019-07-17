@@ -1,5 +1,5 @@
-#!python3
-__author__ = "iPlain"
+#!/usr/bin/env python3
+__author__ = "Jack Steel"
 
 import praw
 import requests
