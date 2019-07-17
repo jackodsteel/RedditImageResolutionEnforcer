@@ -50,7 +50,7 @@ def process_submissions(reddit):
                 f"Unexpected error when processing {submission.id} by {submission.author}, reporting it for manual review.")
             print(e)
             submission.report(
-                f"The image size bot encountered an unknown error {e} on this submission, please manually review it.")
+                f"The image size bot encountered an unknown error on this submission, please manually review it.")
 
 
 def review_post(submission, mods):
@@ -89,8 +89,8 @@ def review_post(submission, mods):
 
 
 def remove_submission(submission, reason):
-    submission.mod.send_removal_message(reason)
     submission.mod.remove()
+    submission.mod.send_removal_message(reason)
 
 
 def get_image_size(url):
